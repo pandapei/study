@@ -9,7 +9,7 @@ transport.connect(username='weblogic', password='centos')
 ssh = paramiko.SSHClient()
 ssh._transport = transport
 
-stdin, stdout, stderr = ssh.exec_command('df')
+stdin, stdout, stderr = ssh.exec_command('hostname')
 #打印命令结果
 print stdout.read()
 
